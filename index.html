@@ -7,7 +7,9 @@
     <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <!--~~~~~~~~~~~~~~~ Icon ~~~~~~~~~~~~~~~-->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
     <link rel="stylesheet" href="./output.css" />
     <!--~~~~~~~~~~~~~~~ Title ~~~~~~~~~~~~~~~-->
@@ -23,17 +25,43 @@
         </nav>
     </header>
     <!--~~~~~~~~~~~~~~~ Main ~~~~~~~~~~~~~~~-->
-    <main class="h-[100vh] flex justify-center items-center">
-        <div class="container rounded-lg bg-white text-[#023047] space-y-3 p-5">
+    <main class="min-h-[100vh] flex justify-center items-center py-24">
+        <div class="container rounded-lg bg-white text-[#023047] space-y-4 p-5 sm:p-8 md:p-12">
             <h3 class="text-center font-bold text-md sm:text-xl">Convert Your Currency</h3>
             <div class="space-y-2">
                 <label for="amount">Enter Amount:</label>
-                <input type="text" id="amount" value="1" class="block w-full rounded-md p-2 text-md border border-slate-400 outline-none">
+                <input type="text" id="amount" value="1"
+                    class="block w-full rounded-md p-2 text-md border border-slate-400 outline-none">
+            </div>
+            <div class="flex justify-between items-center">
+                <div>
+                    <p class="font-bold mb-2">From</p>
+                    <div
+                        class="flex justify-between items-center flex-col md:flex-row border border-slate-400 rounded-md px-1 select">
+                        <img src="https://flagsapi.com/US/flat/64.png" class="w-12" id="fromImg">
+                        <select class="bg-transparent outline-none cursor-pointer px-1" name="fromSelect">
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right-arrow-left text-3xl"></i>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">To</p>
+                    <div
+                        class="flex justify-between items-center flex-col md:flex-row border border-slate-400 rounded-md px-1 select">
+                        <img src="https://flagsapi.com/BD/flat/64.png" class="w-12" id="toImg">
+                        <select class="bg-transparent outline-none cursor-pointer px-1" name="toSelect">
+                        </select>
+                    </div>
+                </div>
             </div>
             <div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <p>1 USD = 120 BDT</p>
+            </div>
+            <div>
+                <button class="block text-center w-full bg-indigo-700 text-white py-2 rounded-md hover:bg-indigo-500"
+                    id="btn">Covert</button>
             </div>
         </div>
     </main>
@@ -44,7 +72,8 @@
         </div>
     </footer>
     <!--~~~~~~~~~~~~~~~ Js ~~~~~~~~~~~~~~~-->
-    <script src=""></script>
+    <script src="code.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
